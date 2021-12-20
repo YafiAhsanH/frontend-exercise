@@ -60,7 +60,7 @@ module.exports = {
       display: ['group-hover']
     },
   },
-  plugins: [require('@tailwindcss/forms'), require('@tailwindcss/line-clamp'), function ({addUtilities}) {
+  plugins: [require('@tailwindcss/forms'), require('@tailwindcss/line-clamp'), require('tailwind-scrollbar-hide'), function ({addUtilities}) {
     const extendLineThrough = {
         '.line-through': {
             'textDecoration': 'line-through',
