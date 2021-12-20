@@ -1,5 +1,5 @@
 import { AiOutlineMenu as MenuIcon } from "react-icons/ai";
-import { BsFillPlayBtnFill as Logo } from "react-icons/bs";
+import { BsPlayBtnFill as Logo } from "react-icons/bs";
 import { IoIosSearch as SearchIcon } from "react-icons/io";
 import { BsFillMicFill as MicIcon } from "react-icons/bs";
 import { RiVideoAddLine as CreateVideoIcon } from "react-icons/ri";
@@ -12,6 +12,7 @@ import { BsBellFill as BellIconActive } from "react-icons/bs";
 
 import { useState } from "react";
 import SideMenu from "../components/SideMenu";
+import GenreFilter from "../components/GenreFilter";
 
 const Home = () => {
   const [createActive, setCreateActive] = useState(false);
@@ -93,9 +94,12 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <div className="h-full max-h-full bg-youtube-black-primary flex">
+      <div className="h-full max-h-full max-w-screen bg-youtube-black-primary flex ">
         <SideMenu />
-        <div></div>
+        <div className="h-full w-full max-w-full ">
+          <GenreFilter />
+          <div className="bg-red-300 h-full"></div>
+        </div>
       </div>
     </div>
   );
