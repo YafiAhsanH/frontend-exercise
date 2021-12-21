@@ -7,7 +7,6 @@ const GenreFilter = () => {
   const [selected, setSelected] = useState("0");
 
   const onWheel = (e: React.WheelEvent<HTMLDivElement>) => {
-    e.preventDefault();
     const filter: HTMLElement | null = document.getElementById("filter");
     if(filter){
         const containerScrollPosition = filter.scrollLeft;
@@ -20,7 +19,7 @@ const GenreFilter = () => {
   };
 
   return (
-    <div id="filter" onWheel={onWheel} className="transition-all duration-100 py-3 px-5 mr-[16%] bg-youtube-black-secondary border-y-[1px] border-youtube-highlight-grey flex gap-x-3 overflow-x-scroll scrollbar-hide">
+    <div id="filter" onWheelCapture={onWheel} className="transition-all duration-100 py-3 px-5 bg-youtube-black-secondary border-y-[1px] border-youtube-highlight-grey flex gap-x-3 overflow-x-scroll scrollbar-hide">
       {genrefilters.map((filter, i) => (
         <div
           key={i}
