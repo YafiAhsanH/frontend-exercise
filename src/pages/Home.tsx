@@ -96,9 +96,9 @@ const Home = () => {
       </div>
       <div className="h-full max-h-full max-w-screen bg-youtube-black-primary flex ">
         <SideMenu />
-        <div className="h-full w-full max-w-full ">
+        <div className="h-full w-full max-w-[84%] ">
           <GenreFilter />
-          <div className="bg-red-300 h-full"></div>
+          <div className="bg-youtube-black-primary h-full w-full"></div>
         </div>
       </div>
     </div>
