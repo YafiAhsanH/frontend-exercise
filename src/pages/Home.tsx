@@ -9,10 +9,10 @@ import { IoApps as AppsIconActive } from "react-icons/io5";
 import { BsBell as BellIcon } from "react-icons/bs";
 import { BsBellFill as BellIconActive } from "react-icons/bs";
 
-
 import { useState } from "react";
 import SideMenu from "../components/SideMenu";
 import GenreFilter from "../components/GenreFilter";
+import VideoLayout from '../components/VideoLayout';
 
 const Home = () => {
   const [createActive, setCreateActive] = useState(false);
@@ -98,7 +98,7 @@ const Home = () => {
         <SideMenu />
         <div className="h-full w-full max-w-[84%] ">
           <GenreFilter />
-          <div className="bg-youtube-black-primary h-full w-full"></div>
+          <VideoLayout />
         </div>
       </div>
     </div>
