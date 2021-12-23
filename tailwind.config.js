@@ -57,10 +57,14 @@ module.exports = {
   },
   variants: {
     extend: {
-      display: ['group-hover']
+      display: ['responsive', 'hover', 'focus', 'group-hover', 'group-focus'],
+      backgroundColor: ['responsive', 'hover', 'focus', 'group-hover', 'group-focus'],
+      textColor: ["responsive", "hover", "focus", "group-hover", "group-focus"],
+      translate: ["responsive", "hover", "focus", "group-hover", "group-focus"],
+      scale: ["responsive", "hover", "focus", "group-hover", "group-focus"],
     },
   },
-  plugins: [require('@tailwindcss/forms'), require('@tailwindcss/line-clamp'), require('tailwind-scrollbar-hide'), function ({addUtilities}) {
+  plugins: [require('@tailwindcss/forms'), require('@tailwindcss/line-clamp'), require('tailwind-scrollbar-hide'), require("tailwindcss-nested-groups"), function ({addUtilities}) {
     const extendLineThrough = {
         '.line-through': {
             'textDecoration': 'line-through',

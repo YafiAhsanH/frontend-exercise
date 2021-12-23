@@ -12,12 +12,14 @@ import { BsBellFill as BellIconActive } from "react-icons/bs";
 import { useState } from "react";
 import SideMenu from "../components/SideMenu";
 import GenreFilter from "../components/GenreFilter";
-import VideoLayout from '../components/VideoLayout';
+import VideoLayout from "../components/VideoLayout";
+import SmallSideMenu from '../components/SmallSideMenu';
 
 const Home = () => {
   const [createActive, setCreateActive] = useState(false);
   const [appsActive, setAppsActive] = useState(false);
   const [notificationActive, setNotificationActive] = useState(false);
+  const [bigSideMenu, setBigSideMenu] = useState(true);
 
   const handleToggleActive = (clicked: string) => {
     setCreateActive(false);
@@ -35,7 +37,10 @@ const Home = () => {
     <div className="h-screen max-h-screen flex flex-col overflow-hidden">
       <div className="bg-youtube-black-secondary h-[7.7%] flex justify-between px-4">
         <div className="flex ">
-          <button className="p-2 border-2 border-transparent active:bg-youtube-accent-grey active:border-youtube-accent-grey focus:animate-click-ping">
+          <button
+            className="p-2 border-2 border-transparent active:bg-youtube-accent-grey active:border-youtube-accent-grey focus:animate-click-ping"
+            onClick={() => setBigSideMenu((prev) => !prev)}
+          >
             <MenuIcon className="text-white text-2xl" />
           </button>
           <div className="flex items-center p-3 hover:cursor-pointer">
@@ -95,8 +100,17 @@ const Home = () => {
         </div>
       </div>
       <div className="h-full max-h-full max-w-screen bg-youtube-black-primary flex ">
-        <SideMenu />
-        <div className="h-full w-full max-w-[84%] ">
+        {bigSideMenu ? (
+          <div className="w-full max-w-[16%]">
+            <SideMenu />
+          </div>
+        ) : (
+          <div className="w-full max-w-[4.7%]">
+            <SmallSideMenu />
+          </div>
+        )}
+
+        <div className={`h-full w-full ${bigSideMenu ? "max-w-[84%]" : "max-w-[95.3%]"}`}>
           <GenreFilter />
           <VideoLayout />
         </div>

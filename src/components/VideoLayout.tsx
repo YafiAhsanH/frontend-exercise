@@ -3,7 +3,7 @@ import VideoCard from './VideoCard';
 
 const VideoLayout = () => {
     return (
-        <div className="h-full w-full pt-6 mx-4">
+        <div className="h-[81%] w-full py-6 px-3 flex flex-wrap gap-y-5 overflow-y-scroll">
             {videos.map(video => (
                 <VideoCard video={video}/>
             ))}
