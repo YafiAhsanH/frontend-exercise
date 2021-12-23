@@ -61,7 +61,7 @@ const SideMenu = () => {
     report: useMatch("/report"),
   };
   return (
-    <div className="group flex-shrink-0 h-full max-h-full pb-[3.5rem] w-[16%] bg-youtube-black-secondary overflow-y-scroll scrollbar-hide hover:scrollbar-default ">
+    <div id="sideMenu" className="group flex-shrink-0 h-full max-h-full pb-[3.5rem] w-full bg-youtube-black-secondary overflow-y-scroll scrollbar-hide hover:scrollbar-default ">
       <div className="py-3 border-b-[1.5px] border-b-youtube-highlight-grey pr-4 group-hover:pr-0">
         <div
           className={`flex py-2 text-white items-center px-6 cursor-pointer justify-items-stretch ${
