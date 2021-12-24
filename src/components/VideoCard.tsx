@@ -3,6 +3,7 @@ import { IoMdCheckmarkCircle as VerifiedIcon } from "react-icons/io";
 import { AiOutlineClockCircle as WatchLaterIcon } from "react-icons/ai";
 import { CgPlayList as QueueIcon } from "react-icons/cg";
 import { FiMoreVertical as MoreIcon } from "react-icons/fi";
+import { Link } from 'react-router-dom';
 
 interface VideoCardI {
   video: VideosI;
@@ -11,7 +12,7 @@ interface VideoCardI {
 const VideoCard = ({ video }: VideoCardI) => {
   const bigSideMenu: HTMLElement | null = document.getElementById("sideMenu");
   return (
-    <div className="relative w-1/4 h-auto px-2 cursor-pointer group-scope ">
+    <Link to={`/video?id=${video.id}`}className="relative w-1/4 h-auto px-2 cursor-pointer group-scope ">
       <div
         className={`w-full ${
           bigSideMenu ? "h-[11.8rem]" : "h-[10.3rem]"
@@ -19,13 +20,13 @@ const VideoCard = ({ video }: VideoCardI) => {
       ></div>
       <div className="absolute hidden top-2 right-4 group-scope-hover:block group">
         <div className=" flex justify-end group-scope hover:bg-youtube-black-primary opacity-90 hover:opacity-100 items-center ">
-          <p className=" select-none leading-relaxed pl-2 pr-1 text-sm font-medium text-transparent transition-all ease-linear duration-200 delay-200 scale-x-0 origin-right group-scope-hover:scale-x-100 group-scope-hover:text-white">
+          <p className=" select-none leading-relaxed pl-2 pr-1 text-sm font-medium text-transparent transition-all ease-linear duration-200  scale-x-0 origin-right group-scope-hover:scale-x-100 group-scope-hover:text-white">
             WATCH LATER
           </p>
           <WatchLaterIcon className="text-2xl text-white bg-youtube-black-primary p-[2px] " />
         </div>
         <div className=" mt-1 flex justify-end group-scope hover:bg-youtube-black-primary opacity-90 hover:opacity-100 items-center ">
-          <p className=" select-none leading-relaxed pl-2 pr-1 text-sm font-medium text-transparent transition-all ease-linear duration-200 delay-200 scale-x-0 origin-right group-scope-hover:scale-x-100 group-scope-hover:text-white">
+          <p className=" select-none leading-relaxed pl-2 pr-1 text-sm font-medium text-transparent transition-all ease-linear duration-200  scale-x-0 origin-right group-scope-hover:scale-x-100 group-scope-hover:text-white">
             ADD TO QUEUE
           </p>
           <QueueIcon className="text-2xl text-white bg-youtube-black-primary p-[2px]" />
@@ -54,7 +55,7 @@ const VideoCard = ({ video }: VideoCardI) => {
           </button>
         </div>
       </div>
-    </div>
+    </Link>
   );
 };
 

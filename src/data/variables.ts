@@ -45,7 +45,7 @@ export const filters = [
 
 export const videos: VideosI[] = [
   {
-    id: "1",
+    id: "0",
     title: "Styling Forms with Tailwind CSS",
     channel: "Tailwind Labs",
     verified: false,
@@ -54,7 +54,7 @@ export const videos: VideosI[] = [
     duration: "19:25",
   },
   {
-    id: "2",
+    id: "1",
     title: "xQc CAN'T STOP LAUGHING at UNUSUAL MEMES COMPILATION V169xQcCAN",
     channel: "xQcOW",
     verified: true,
@@ -63,13 +63,22 @@ export const videos: VideosI[] = [
     duration: "8:25",
   },
   {
-    id: "3",
+    id: "2",
     title: "Pro Nuzlocker React To Jaiden Animations Two PLayer Nuzlocke",
     channel: "Pokemon Challenges",
     verified: true,
     views: "8.9K",
     published: "15 minutes ago",
     duration: "47:15",
+  },
+  {
+    id: "3",
+    title: "xQc CAN'T STOP LAUGHING at UNUSUAL MEMES COMPILATION V169",
+    channel: "xQcOW",
+    verified: true,
+    views: "333K",
+    published: "1 hour ago",
+    duration: "8:25",
   },
   {
     id: "4",
@@ -82,15 +91,6 @@ export const videos: VideosI[] = [
   },
   {
     id: "5",
-    title: "xQc CAN'T STOP LAUGHING at UNUSUAL MEMES COMPILATION V169",
-    channel: "xQcOW",
-    verified: true,
-    views: "333K",
-    published: "1 hour ago",
-    duration: "8:25",
-  },
-  {
-    id: "6",
     title: "Styling Forms with Tailwind CSS",
     channel: "Tailwind Labs",
     verified: false,
@@ -99,7 +99,7 @@ export const videos: VideosI[] = [
     duration: "19:25",
   },
   {
-    id: "7",
+    id: "6",
     title: "xQc CAN'T STOP LAUGHING at UNUSUAL MEMES COMPILATION V169",
     channel: "xQcOW",
     verified: true,
@@ -108,13 +108,22 @@ export const videos: VideosI[] = [
     duration: "8:25",
   },
   {
-    id: "8",
+    id: "7",
     title: "Pro Nuzlocker React To Jaiden Animations Two PLayer Nuzlocke",
     channel: "Pokemon Challenges",
     verified: true,
     views: "8.9K",
     published: "15 minutes ago",
     duration: "47:15",
+  },
+  {
+    id: "8",
+    title: "xQc CAN'T STOP LAUGHING at UNUSUAL MEMES COMPILATION V169",
+    channel: "xQcOW",
+    verified: true,
+    views: "333K",
+    published: "1 hour ago",
+    duration: "8:25",
   },
   {
     id: "9",
@@ -127,15 +136,6 @@ export const videos: VideosI[] = [
   },
   {
     id: "10",
-    title: "xQc CAN'T STOP LAUGHING at UNUSUAL MEMES COMPILATION V169",
-    channel: "xQcOW",
-    verified: true,
-    views: "333K",
-    published: "1 hour ago",
-    duration: "8:25",
-  },
-  {
-    id: "11",
     title: "Styling Forms with Tailwind CSS",
     channel: "Tailwind Labs",
     verified: false,
@@ -144,7 +144,7 @@ export const videos: VideosI[] = [
     duration: "19:25",
   },
   {
-    id: "12",
+    id: "11",
     title: "xQc CAN'T STOP LAUGHING at UNUSUAL MEMES COMPILATION V169",
     channel: "xQcOW",
     verified: true,
@@ -153,7 +153,7 @@ export const videos: VideosI[] = [
     duration: "8:25",
   },
   {
-    id: "13",
+    id: "12",
     title: "Pro Nuzlocker React To Jaiden Animations Two PLayer Nuzlocke",
     channel: "Pokemon Challenges",
     verified: true,
@@ -162,7 +162,7 @@ export const videos: VideosI[] = [
     duration: "47:15",
   },
   {
-    id: "14",
+    id: "13",
     title: "xQc CAN'T STOP LAUGHING at UNUSUAL MEMES COMPILATION V169",
     channel: "xQcOW",
     verified: true,
@@ -171,7 +171,7 @@ export const videos: VideosI[] = [
     duration: "8:25",
   },
   {
-    id: "15",
+    id: "14",
     title: "xQc CAN'T STOP LAUGHING at UNUSUAL MEMES COMPILATION V169",
     channel: "xQcOW",
     verified: true,
