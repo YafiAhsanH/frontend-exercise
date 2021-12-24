@@ -35,9 +35,9 @@ import { BsFlagFill as ReportIconActive } from "react-icons/bs";
 import { MdHelpOutline as HelpIcon } from "react-icons/md";
 import { RiFeedbackLine as FeedbackIcon } from "react-icons/ri";
 
-import { useMatch } from "react-router-dom";
+import { useMatch, Link } from "react-router-dom";
 import { useState } from "react";
-import { playlists, subbedChannels } from "../data/variables";
+import { playlists, subbedChannels } from "../../data/variables";
 
 const SideMenu = () => {
   const [showMoreMenu, setShowMoreMenu] = useState(false);
@@ -61,9 +61,13 @@ const SideMenu = () => {
     report: useMatch("/report"),
   };
   return (
-    <div id="sideMenu" className="group flex-shrink-0 h-full max-h-full pb-[3.5rem] w-full bg-youtube-black-secondary overflow-y-scroll scrollbar-hide hover:scrollbar-default ">
+    <div
+      id="sideMenu"
+      className="group flex-shrink-0 h-full max-h-full pb-[3.5rem] w-full bg-youtube-black-secondary overflow-y-scroll scrollbar-hide hover:scrollbar-default "
+    >
       <div className="py-3 border-b-[1.5px] border-b-youtube-highlight-grey pr-4 group-hover:pr-0">
-        <div
+        <Link
+          to={"/"}
           className={`flex py-2 text-white items-center px-6 cursor-pointer justify-items-stretch ${
             urlMatch.home
               ? "bg-youtube-highlight-grey hover:bg-[rgb(70,70,70)] "
@@ -80,7 +84,7 @@ const SideMenu = () => {
           >
             Home
           </p>
-        </div>
+        </Link>
         <div
           className={`flex py-2 text-white items-center px-6 cursor-pointer justify-items-stretch ${
             urlMatch.explore
