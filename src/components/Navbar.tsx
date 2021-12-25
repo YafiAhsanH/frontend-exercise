@@ -32,7 +32,10 @@ const Navbar = ({
   const [hideSideMenu, setHideSideMenu] = useState(true);
   const location = useLocation();
 
-  useEffect(() => setHideSideMenu(true), [location]);
+  useEffect(() => {
+    setHideSideMenu(true);
+    setBigSideMenu(true);
+  }, [location, setBigSideMenu]);
 
   const handleToggleActive = (clicked: string) => {
     setCreateActive(false);

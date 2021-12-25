@@ -5,5 +5,8 @@ export interface VideosI {
   verified: boolean;
   views: string;
   published: string;
+  date?: string;
   duration: string;
+  hashtag?: string[];
+  likes?: string;
 }
