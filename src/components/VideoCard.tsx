@@ -3,7 +3,7 @@ import { IoMdCheckmarkCircle as VerifiedIcon } from "react-icons/io";
 import { AiOutlineClockCircle as WatchLaterIcon } from "react-icons/ai";
 import { CgPlayList as QueueIcon } from "react-icons/cg";
 import { FiMoreVertical as MoreIcon } from "react-icons/fi";
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 
 interface VideoCardI {
   video: VideosI;
@@ -12,25 +12,30 @@ interface VideoCardI {
 const VideoCard = ({ video }: VideoCardI) => {
   const bigSideMenu: HTMLElement | null = document.getElementById("sideMenu");
   return (
-    <Link to={`/video?id=${video.id}`}className="relative w-1/4 h-auto px-2 cursor-pointer group-scope ">
+    <Link
+      to={`/video?id=${video.id}`}
+      className="relative w-1/4 h-auto px-2 cursor-pointer group-scope "
+    >
       <div
-        className={`w-full ${
+        className={`relative w-full ${
           bigSideMenu ? "h-[11.8rem]" : "h-[10.3rem]"
         } bg-gray-500`}
-      ></div>
-      <div className="absolute hidden top-2 right-4 group-scope-hover:block group">
-        <div className=" flex justify-end group-scope hover:bg-youtube-black-primary opacity-90 hover:opacity-100 items-center ">
-          <p className=" select-none leading-relaxed pl-2 pr-1 text-sm font-medium text-transparent transition-all ease-linear duration-200  scale-x-0 origin-right group-scope-hover:scale-x-100 group-scope-hover:text-white">
-            WATCH LATER
-          </p>
-          <WatchLaterIcon className="text-2xl text-white bg-youtube-black-primary p-[2px] " />
+      >
+        <div className="absolute hidden top-2 right-2 group-scope-hover:block group">
+          <div className=" flex justify-end group-scope hover:bg-youtube-black-primary opacity-90 hover:opacity-100 items-center ">
+            <p className=" select-none leading-relaxed pl-2 pr-1 text-sm font-medium text-transparent transition-all ease-linear duration-200  scale-x-0 origin-right group-scope-hover:scale-x-100 group-scope-hover:text-white">
+              WATCH LATER
+            </p>
+            <WatchLaterIcon className="text-2xl text-white bg-youtube-black-primary p-[2px] " />
+          </div>
+          <div className=" mt-1 flex justify-end group-scope hover:bg-youtube-black-primary opacity-90 hover:opacity-100 items-center ">
+            <p className=" select-none leading-relaxed pl-2 pr-1 text-sm font-medium text-transparent transition-all ease-linear duration-200  scale-x-0 origin-right group-scope-hover:scale-x-100 group-scope-hover:text-white">
+              ADD TO QUEUE
+            </p>
+            <QueueIcon className="text-2xl text-white bg-youtube-black-primary p-[2px]" />
+          </div>
         </div>
-        <div className=" mt-1 flex justify-end group-scope hover:bg-youtube-black-primary opacity-90 hover:opacity-100 items-center ">
-          <p className=" select-none leading-relaxed pl-2 pr-1 text-sm font-medium text-transparent transition-all ease-linear duration-200  scale-x-0 origin-right group-scope-hover:scale-x-100 group-scope-hover:text-white">
-            ADD TO QUEUE
-          </p>
-          <QueueIcon className="text-2xl text-white bg-youtube-black-primary p-[2px]" />
-        </div>
+        <p className="absolute bottom-2 right-2 py-[1px] px-[3px] text-white bg-youtube-black-primary text-xs font-medium">{video.duration}</p>
       </div>
 
       <div className="flex w-full pt-3">

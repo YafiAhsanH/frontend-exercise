@@ -51,7 +51,10 @@ export const videos: VideosI[] = [
     verified: false,
     views: "62K",
     published: "9 months ago",
+    date: "Mar 25, 2021",
     duration: "19:25",
+    hashtag: ["Tailwind","CSS","Front_end"],
+    likes: "10K",
   },
   {
     id: "1",
@@ -64,7 +67,7 @@ export const videos: VideosI[] = [
   },
   {
     id: "2",
-    title: "Pro Nuzlocker React To Jaiden Animations Two PLayer Nuzlocke",
+    title: "Pro Nuzlocker React To Jaiden Animations Two Player Nuzlocke",
     channel: "Pokemon Challenges",
     verified: true,
     views: "8.9K",
